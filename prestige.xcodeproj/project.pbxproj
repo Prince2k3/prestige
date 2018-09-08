@@ -29,8 +29,6 @@
 
 /* Begin PBXFileReference section */
 		1E07603B2143972800F45F1B /* Carthage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Carthage.xcconfig; sourceTree = "<group>"; };
-		1E07604021439CA300F45F1B /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
-		1E07604221439CBA00F45F1B /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/Mac/PromiseKit.framework; sourceTree = "<group>"; };
 		1E53E73D2143800900247C49 /* Prestige.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Prestige.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E53E7402143800900247C49 /* prestige.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prestige.h; sourceTree = "<group>"; };
 		1E53E7412143800900247C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,15 +61,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E07603F21439CA200F45F1B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1E07604221439CBA00F45F1B /* PromiseKit.framework */,
-				1E07604021439CA300F45F1B /* PromiseKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		1E53E7332143800900247C49 = {
 			isa = PBXGroup;
 			children = (
@@ -80,7 +69,6 @@
 				1E53E73F2143800900247C49 /* prestige */,
 				1E53E74A2143800900247C49 /* prestigeTests */,
 				1E53E73E2143800900247C49 /* Products */,
-				1E07603F21439CA200F45F1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -427,6 +415,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mfxstudios.prestige;
@@ -463,6 +453,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mfxstudios.prestige;
