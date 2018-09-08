@@ -1,5 +1,5 @@
 import Foundation
-@_exported import PromiseKit
+import PromiseKit
 
 open class Store {
     private let dispatcher: Dispatcher = .shared

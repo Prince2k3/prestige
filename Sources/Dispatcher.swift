@@ -1,5 +1,5 @@
 import Foundation
-@_exported import PromiseKit
+import PromiseKit
 
 public protocol Dispatchable {
     associatedtype Action: Actionable where Action.State == Self
