@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E07603B2143972800F45F1B /* Prestige.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Prestige.xcconfig; sourceTree = "<group>"; };
+		1E07603B2143972800F45F1B /* Carthage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Carthage.xcconfig; sourceTree = "<group>"; };
 		1E07604021439CA300F45F1B /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		1E07604221439CBA00F45F1B /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/Mac/PromiseKit.framework; sourceTree = "<group>"; };
 		1E53E73D2143800900247C49 /* Prestige.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Prestige.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +75,7 @@
 		1E53E7332143800900247C49 = {
 			isa = PBXGroup;
 			children = (
-				1E07603B2143972800F45F1B /* Prestige.xcconfig */,
+				1E07603B2143972800F45F1B /* Carthage.xcconfig */,
 				1E53E7572143801200247C49 /* Sources */,
 				1E53E73F2143800900247C49 /* prestige */,
 				1E53E74A2143800900247C49 /* prestigeTests */,
@@ -283,7 +283,7 @@
 /* Begin XCBuildConfiguration section */
 		1E53E74F2143800900247C49 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E07603B2143972800F45F1B /* Prestige.xcconfig */;
+			baseConfigurationReference = 1E07603B2143972800F45F1B /* Carthage.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -350,7 +350,7 @@
 		};
 		1E53E7502143800900247C49 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E07603B2143972800F45F1B /* Prestige.xcconfig */;
+			baseConfigurationReference = 1E07603B2143972800F45F1B /* Carthage.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
