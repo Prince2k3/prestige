@@ -1,0 +1,14 @@
+//
+//  Prestige.xcconfig
+//  prestige
+//
+//  Created by Prince Ugwuh on 9/8/18.
+//  Copyright © 2018 MFX Studios. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+FRAMEWORK_SEARCH_PATHS[sdk=macosx*] = $(SRCROOT)/Carthage/Build/Mac/ $(inherited)
+FRAMEWORK_SEARCH_PATHS[sdk=iphone*] = $(SRCROOT)/Carthage/Build/iOS/ $(inherited)
+FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*] = $(SRCROOT)/Carthage/Build/iOS/ $(inherited)
