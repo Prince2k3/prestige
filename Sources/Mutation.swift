@@ -12,15 +12,15 @@ extension Mutable {
         return Mirror(reflecting: self).children.first?.label ?? String(describing: self)
     }
     
-    var type: String {
+    public var type: String {
         return self.caseName.snakeCased().uppercased()
     }
     
-    var payload: Any? {
+    public var payload: Any? {
         return Mirror(reflecting: self).children.first?.value
     }
     
-    var mutation: (type: String, payload: Any?)? {
+    public var mutation: (type: String, payload: Any?)? {
         return (self.type, self.payload)
     }
 }
