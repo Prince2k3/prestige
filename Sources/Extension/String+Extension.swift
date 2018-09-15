@@ -12,4 +12,8 @@ extension String {
         let string = regex.stringByReplacingMatches(in: self, options: [], range: range, withTemplate: template)
         return string.lowercased()
     }
+    
+    func lowercasingFirstLetter() -> String {
+        return prefix(1).lowercased() + dropFirst()
+    }
 }

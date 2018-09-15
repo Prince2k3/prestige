@@ -5,9 +5,7 @@ open class Store {
     private let dispatcher: Dispatcher = .shared
     
     private var states: [State] {
-        let mirror = Mirror(reflecting: self)
-        let states = mirror.children.compactMap { $0.value as? State }
-        return states
+        return collectStates(Mirror(reflecting: self))
     }
     
     public init() {
@@ -20,5 +18,17 @@ open class Store {
 
     public func commit<M: Mutable>(_ mutation: M) {
         self.dispatcher.commit(mutation)
+    }
+}
+
+extension Store {
+    private func collectStates(_ mirror: Mirror) -> [State] {
+        var states = [State]()
+        for (_, value) in mirror.children {
+            guard let value = value as? State else { continue }
+            states.append(value)
+            states.append(contentsOf: collectStates(Mirror(reflecting: value)))
+        }
+        return states
     }
 }

@@ -2,8 +2,8 @@ import Foundation
 @_exported import PromiseKit
 
 public protocol Dispatchable {
-    associatedtype Action: Actionable // where Action.State == Self
-    associatedtype Mutation: Mutable // where Mutation.State == Self
+    associatedtype Action: Actionable
+    associatedtype Mutation: Mutable
     
     func dispatch(_ action: Action) -> Promise<Void>
     func commit(_ mutation: Mutation)

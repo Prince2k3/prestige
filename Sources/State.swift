@@ -13,12 +13,11 @@ extension State {
     }
 }
 
-
-
-fileprivate extension String {
-    func lowercasingFirstLetter() -> String {
-        return prefix(1).lowercased() + dropFirst()
-    }
-}
-
 public typealias DispatchState = Prestige.State & Prestige.Dispatchable
+
+
+//store.dispatch(.increment(1))
+//
+//// vs
+//
+//store.counter.dispatch(.increment(1)) // works
