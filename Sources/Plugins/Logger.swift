@@ -6,6 +6,6 @@ public final class Logger: Plugin {
     }
     
     public func subscribe(_ mutation: (type: String, payload: Any?)) {
-        print(mutation)
+        print(mutation, state)
     }
 }

@@ -14,6 +14,8 @@ public final class Dispatcher {
     
     private let cache = StateCache()
     
+    var plugins: [Plugin] = []
+    
     private init() {}
     
     func add(_ object: Prestige.State) {
@@ -25,6 +27,11 @@ public final class Dispatcher {
             let state = self.cache.item(type: M.State.self)
             else { fatalError("State not found") }
         state.commit(mutation)
+        self.plugins.forEach {
+            if let mutation = mutation.mutation {
+                $0.subscribe(mutation, state: state)
+            }
+        }
     }
     
     func dispatch<A: Actionable>(_ action: A) -> Promise<Void> {
@@ -32,6 +39,13 @@ public final class Dispatcher {
             let state = self.cache.item(type: A.State.self)
             else { fatalError("State not found") }
         return state.dispatch(action)
+        .get {
+            self.plugins.forEach {
+                if let action = action.action {
+                    $0.subscribeAction(action, state: state)
+                }
+            }
+        }
     }
 }
 

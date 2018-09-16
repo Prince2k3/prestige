@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol State {}
+public protocol State: CustomStringConvertible {}
 
 extension State {
     public static var identifier: String {
@@ -10,6 +10,20 @@ extension State {
             return String(string.dropLast(suffix.count)).lowercasingFirstLetter()
         }
         return string.lowercasingFirstLetter()
+    }
+}
+
+extension State {
+    var description : String {
+        var description = "***** \(type(of: self)) *****\n"
+        
+        let this = Mirror(reflecting: self)
+        for child in this.children {
+            guard let propertyName = child.label else { continue }
+            description += "\(propertyName): \(child.value)\n"
+        }
+        
+        return description
     }
 }
 
