@@ -19,7 +19,7 @@ extension Actionable {
         return Mirror(reflecting: self).children.first?.value
     }
     
-    public var action: (type: String, payload: Any?)? {
+    public var action: PayloadRepresentation {
         return (self.type, self.payload)
     }
 }

@@ -4,6 +4,14 @@ import Foundation
 open class Store  {
     private let dispatcher: Dispatcher = .shared
     
+    var mutationsHistory: [PayloadRepresentation] {
+        return dispatcher.mutations
+    }
+    
+    var actionsHistory: [PayloadRepresentation] {
+        return dispatcher.actions
+    }
+    
     private var states: [State] {
         return collectStates(Mirror(reflecting: self))
     }

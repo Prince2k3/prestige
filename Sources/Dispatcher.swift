@@ -1,6 +1,8 @@
 import Foundation
 @_exported import PromiseKit
 
+public typealias Payload = (type: String, payload: Any?)
+
 public protocol Dispatchable {
     associatedtype Action: Actionable
     associatedtype Mutation: Mutable
@@ -15,7 +17,8 @@ public final class Dispatcher {
     private let cache = StateCache()
     
     var plugins: [Plugin] = []
-    
+    var mutations: [Payload] = []
+    var actions: [Payload] = []
     private init() {}
     
     func add(_ object: Prestige.State) {
@@ -26,11 +29,10 @@ public final class Dispatcher {
         guard
             let state = self.cache.item(type: M.State.self)
             else { fatalError("State not found") }
+        self.mutations.append(mutation.mutation)
         state.commit(mutation)
         self.plugins.forEach {
-            if let mutation = mutation.mutation {
-                $0.subscribe(mutation, state: state)
-            }
+            $0.subscribe(mutation.mutation, state: state)
         }
     }
     
@@ -38,12 +40,11 @@ public final class Dispatcher {
         guard
             let state = self.cache.item(type: A.State.self)
             else { fatalError("State not found") }
+        self.actions.append(action.action)
         return state.dispatch(action)
         .get {
             self.plugins.forEach {
-                if let action = action.action {
-                    $0.subscribeAction(action, state: state)
-                }
+                $0.subscribeAction(action.action, state: state)
             }
         }
     }

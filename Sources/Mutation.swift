@@ -1,5 +1,7 @@
 import Foundation
 
+public typealias PayloadRepresentation = (type: String, payload: Any?)
+
 public protocol Mutable: Equatable {
     associatedtype State: DispatchState where State.Mutation == Self
     
@@ -20,7 +22,7 @@ extension Mutable {
         return Mirror(reflecting: self).children.first?.value
     }
     
-    public var mutation: (type: String, payload: Any?)? {
+    public var mutation: PayloadRepresentation {
         return (self.type, self.payload)
     }
 }
