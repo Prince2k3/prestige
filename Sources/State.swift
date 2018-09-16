@@ -14,10 +14,3 @@ extension State {
 }
 
 public typealias DispatchState = Prestige.State & Prestige.Dispatchable
-
-
-//store.dispatch(.increment(1))
-//
-//// vs
-//
-//store.counter.dispatch(.increment(1)) // works

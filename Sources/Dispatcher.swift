@@ -14,9 +14,7 @@ public final class Dispatcher {
     
     private let cache = StateCache()
     
-    private init() {
-        
-    }
+    private init() {}
     
     func add(_ object: Prestige.State) {
         self.cache.add(object)
