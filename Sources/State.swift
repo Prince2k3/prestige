@@ -14,7 +14,7 @@ extension State {
 }
 
 extension State {
-    var description : String {
+    public var description : String {
         var description = "***** \(type(of: self)) *****\n"
         
         let this = Mirror(reflecting: self)
