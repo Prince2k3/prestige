@@ -4,11 +4,11 @@ import Foundation
 open class Store  {
     private let dispatcher: Dispatcher = .shared
     
-    var mutationsHistory: [PayloadRepresentation] {
+    var mutationsHistory: [Payload] {
         return dispatcher.mutations
     }
     
-    var actionsHistory: [PayloadRepresentation] {
+    var actionsHistory: [Payload] {
         return dispatcher.actions
     }
     

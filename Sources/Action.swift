@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol Actionable: Equatable {
+public protocol Actionable {
     associatedtype State: DispatchState where State.Action == Self
     
     var type: String { get }
@@ -19,7 +19,7 @@ extension Actionable {
         return Mirror(reflecting: self).children.first?.value
     }
     
-    public var action: PayloadRepresentation {
+    public var action: Payload {
         return (self.type, self.payload)
     }
 }
