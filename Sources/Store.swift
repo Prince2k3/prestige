@@ -7,7 +7,7 @@ public protocol State {
 
 public protocol Action {
     associatedtype State: Prestige.State
-    func mutate(_ state: inout State) -> Promise<Void>
+    func mutate(_ state: State, completion: (State) -> Void) -> Promise<Void>
 }
 
 public final class Store<State: Prestige.State> {
@@ -18,6 +18,8 @@ public final class Store<State: Prestige.State> {
     }
     
     public func dispatch<Action: Prestige.Action>(_ action: Action) -> Promise<Void> where Action.State == State {
-        return action.mutate(&self.state)
+        return action.mutate(self.state) { state in
+            self.state = state
+        }
     }
 }
