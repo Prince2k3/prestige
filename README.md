@@ -4,7 +4,7 @@ Prestige is a predictable state container, written in Swift. Inspired by [Redux]
 
 ## Usage
 
-Define your app **state**. In this example I am using a `struct`. the state of your application is stored in a single data structure. This makes it easier to understand the behavior of the app state at any given point in time, simplifies state persistence and improves code readability.:
+Define your app **state**. In this example I am using a `struct`. the state of your application is stored in a single data structure. This makes it easier to understand the behavior of the app state at any given point in time, simplifies state persistence and improves code readability:
 
 ```swift
 struct AppState: State {
@@ -12,7 +12,7 @@ struct AppState: State {
 }
 ```
 
-As an example, operations that users might perform within your app would be described as **actions**. State should only be mutated through dispatched **actions**, lightweight objects that mutate the state. Since mutations are centralized, inconsistencies are infrequent and race-conditions become easier to avoid.:
+As an example, operations that users might perform within your app would be described as **actions**. State should only be mutated through dispatched **actions**, lightweight objects that mutate the state. Since mutations are centralized, inconsistencies are infrequent and race-conditions become easier to avoid:
 
 ```swift
 struct IncrementAction {
@@ -35,7 +35,7 @@ Then you would define a **store**, a data structure used to hold and safeguard y
 let store = Store<AppState>() 
 ```
 
-Actions are dispatched through the store, and promise is returned when an **action** is completed or an error:
+Actions are dispatched through the store, and promise is returned when an **action** is completed or has an error:
 
 ```swift
 store.dispatch(IncrementAction(increment: 3))
