@@ -23,13 +23,13 @@ extension IncrementAction: Action {
    typealias State = AppState
   
     func mutate(_ state: AppState) -> Promise<AppState> {
-        let count = state.counter + 1
+        let count = state.counter + self.increment
         return .value(AppState(counter: count))
     }
 }
 ```
 
-Then you would define a **store**, a data structure used to hold and safeguard your state. This store will dispatch actions that will to mutate  the **state** based on those actions. A typical application would define only one store and hold it in memory for its lifetime:
+Then you would define a **store**, a data structure used to hold and safeguard your state. A typical application would define only one store and hold it in memory for its lifetime:
 
 ```swift
 let store = Store<AppState>() 
