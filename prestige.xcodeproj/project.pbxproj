@@ -10,8 +10,7 @@
 		1E53E7472143800900247C49 /* Prestige.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E53E73D2143800900247C49 /* Prestige.framework */; };
 		1E53E74C2143800900247C49 /* prestigeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E53E74B2143800900247C49 /* prestigeTests.swift */; };
 		1E53E74E2143800900247C49 /* prestige.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E53E7402143800900247C49 /* prestige.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E53E7612143802500247C49 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E53E75C2143802500247C49 /* Store.swift */; };
-		1EBDB652214CC16F0006199B /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBDB651214CC16F0006199B /* String+Extension.swift */; };
+		1E53E7612143802500247C49 /* Prestige.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E53E75C2143802500247C49 /* Prestige.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,8 +31,7 @@
 		1E53E7462143800900247C49 /* prestigeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = prestigeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E53E74B2143800900247C49 /* prestigeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prestigeTests.swift; sourceTree = "<group>"; };
 		1E53E74D2143800900247C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E53E75C2143802500247C49 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		1EBDB651214CC16F0006199B /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		1E53E75C2143802500247C49 /* Prestige.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prestige.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,18 +94,9 @@
 		1E53E7572143801200247C49 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				1EBDB650214CC15E0006199B /* Extension */,
-				1E53E75C2143802500247C49 /* Store.swift */,
+				1E53E75C2143802500247C49 /* Prestige.swift */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		1EBDB650214CC15E0006199B /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				1EBDB651214CC16F0006199B /* String+Extension.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,8 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E53E7612143802500247C49 /* Store.swift in Sources */,
-				1EBDB652214CC16F0006199B /* String+Extension.swift in Sources */,
+				1E53E7612143802500247C49 /* Prestige.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
