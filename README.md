@@ -8,7 +8,7 @@ Define your app **state**. In this example I am using a `struct`. the state of y
 
 ```swift
 struct AppState: State {
-    let counter: Int = 0
+    var counter: Int = 0
 }
 ```
 
