@@ -8,7 +8,7 @@ Define your app **state**. In this example I am using a `struct`. the state of y
 
 ```swift
 struct AppState: State {
-    let counter: Int
+    var counter: Int = 0
 }
 ```
 
@@ -16,7 +16,7 @@ As an example, operations that users might perform within your app would be desc
 
 ```swift
 struct IncrementAction {
-    let increment: Int = 0
+    let increment: Int
 }
 
 extension IncrementAction: Action {
@@ -31,8 +31,15 @@ extension IncrementAction: Action {
 
 Then you would define a **store**, a data structure used to hold and safeguard your state. A typical application would define only one store and hold it in memory for its lifetime:
 
+The **store** can initialize the AppState itself if default values are set.
+
 ```swift
 let store = Store<AppState>() 
+```
+otherwise you can initalize the AppState yourself by overriding the **store** initializer
+
+```swift
+let store = Store<AppState>(state: AppState(counter: 0)) 
 ```
 
 Actions are dispatched through the store, and promise is returned when an **action** is completed or has an error:
