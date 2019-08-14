@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import prestige
+@testable import Prestige
 
 class prestigeTests: XCTestCase {
 

@@ -32,6 +32,7 @@
 		1E53E74B2143800900247C49 /* prestigeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prestigeTests.swift; sourceTree = "<group>"; };
 		1E53E74D2143800900247C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E53E75C2143802500247C49 /* Prestige.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prestige.swift; sourceTree = "<group>"; };
+		1E6D98AD224AD13C0019F46A /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		1E53E7332143800900247C49 = {
 			isa = PBXGroup;
 			children = (
+				1E6D98AD224AD13C0019F46A /* Cartfile */,
 				1E07603B2143972800F45F1B /* Carthage.xcconfig */,
 				1E53E7572143801200247C49 /* Sources */,
 				1E53E73F2143800900247C49 /* prestige */,
@@ -169,7 +171,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1E53E7372143800900247C49 /* Build configuration list for PBXProject "prestige" */;
+			buildConfigurationList = 1E53E7372143800900247C49 /* Build configuration list for PBXProject "Prestige" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -495,7 +497,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E53E7372143800900247C49 /* Build configuration list for PBXProject "prestige" */ = {
+		1E53E7372143800900247C49 /* Build configuration list for PBXProject "Prestige" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E53E74F2143800900247C49 /* Debug */,
