@@ -78,3 +78,5 @@ iOSInjectionProject/
 *.xcuserstate
 UserInterfaceState.xcuserstate
 .DS_Store
+/prestige/.Info.plist.icloud
+/prestigeTests/.Info.plist.icloud
