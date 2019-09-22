@@ -3,528 +3,428 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E53E7472143800900247C49 /* Prestige.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E53E73D2143800900247C49 /* Prestige.framework */; };
-		1E53E74C2143800900247C49 /* prestigeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E53E74B2143800900247C49 /* prestigeTests.swift */; };
-		1E53E74E2143800900247C49 /* prestige.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E53E7402143800900247C49 /* prestige.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E53E7612143802500247C49 /* Prestige.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E53E75C2143802500247C49 /* Prestige.swift */; };
+		1E146AA62337F9C400232770 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E146AA52337F9C400232770 /* PromiseKit.framework */; };
+		1E146AA72337F9C400232770 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E146AA52337F9C400232770 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		OBJ_25 /* Prestige.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Prestige.swift */; };
+		OBJ_43 /* PrestigeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* PrestigeTests.swift */; };
+		OBJ_44 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
+		OBJ_46 /* Prestige.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Prestige::Prestige::Product" /* Prestige.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1E53E7482143800900247C49 /* PBXContainerItemProxy */ = {
+		1E146A8B2337DBA200232770 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1E53E7342143800900247C49 /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1E53E73C2143800900247C49;
-			remoteInfo = prestige;
+			remoteGlobalIDString = "Prestige::Prestige";
+			remoteInfo = Prestige;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1E146AA82337F9C400232770 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1E146AA72337F9C400232770 /* PromiseKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		1E07603B2143972800F45F1B /* Carthage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Carthage.xcconfig; sourceTree = "<group>"; };
-		1E53E73D2143800900247C49 /* Prestige.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Prestige.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E53E7402143800900247C49 /* prestige.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prestige.h; sourceTree = "<group>"; };
-		1E53E7412143800900247C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E53E7462143800900247C49 /* prestigeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = prestigeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E53E74B2143800900247C49 /* prestigeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prestigeTests.swift; sourceTree = "<group>"; };
-		1E53E74D2143800900247C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E53E75C2143802500247C49 /* Prestige.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prestige.swift; sourceTree = "<group>"; };
-		1E6D98AD224AD13C0019F46A /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		1E146AA52337F9C400232770 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		OBJ_12 /* PrestigeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrestigeTests.swift; sourceTree = "<group>"; };
+		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_18 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		OBJ_9 /* Prestige.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prestige.swift; sourceTree = "<group>"; };
+		"Prestige::Prestige::Product" /* Prestige.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Prestige.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Prestige::PrestigeTests::Product" /* PrestigeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = PrestigeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1E53E73A2143800900247C49 /* Frameworks */ = {
+		OBJ_26 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
+				1E146AA62337F9C400232770 /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E53E7432143800900247C49 /* Frameworks */ = {
+		OBJ_45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				1E53E7472143800900247C49 /* Prestige.framework in Frameworks */,
+				OBJ_46 /* Prestige.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E53E7332143800900247C49 = {
+		1E146AA42337F9C300232770 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1E6D98AD224AD13C0019F46A /* Cartfile */,
-				1E07603B2143972800F45F1B /* Carthage.xcconfig */,
-				1E53E7572143801200247C49 /* Sources */,
-				1E53E73F2143800900247C49 /* prestige */,
-				1E53E74A2143800900247C49 /* prestigeTests */,
-				1E53E73E2143800900247C49 /* Products */,
+				1E146AA52337F9C400232770 /* PromiseKit.framework */,
 			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1E53E73E2143800900247C49 /* Products */ = {
+		OBJ_10 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				1E53E73D2143800900247C49 /* Prestige.framework */,
-				1E53E7462143800900247C49 /* prestigeTests.xctest */,
+				OBJ_11 /* PrestigeTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_11 /* PrestigeTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_12 /* PrestigeTests.swift */,
+				OBJ_13 /* XCTestManifests.swift */,
+			);
+			name = PrestigeTests;
+			path = Tests/PrestigeTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"Prestige::PrestigeTests::Product" /* PrestigeTests.xctest */,
+				"Prestige::Prestige::Product" /* Prestige.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1E53E73F2143800900247C49 /* prestige */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
-				1E53E7402143800900247C49 /* prestige.h */,
-				1E53E7412143800900247C49 /* Info.plist */,
+				OBJ_7 /* Sources */,
+				OBJ_10 /* Tests */,
+				OBJ_14 /* Products */,
+				OBJ_18 /* Cartfile */,
+				1E146AA42337F9C300232770 /* Frameworks */,
 			);
-			path = prestige;
 			sourceTree = "<group>";
 		};
-		1E53E74A2143800900247C49 /* prestigeTests */ = {
+		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				1E53E74B2143800900247C49 /* prestigeTests.swift */,
-				1E53E74D2143800900247C49 /* Info.plist */,
+				OBJ_8 /* Prestige */,
 			);
-			path = prestigeTests;
-			sourceTree = "<group>";
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
 		};
-		1E53E7572143801200247C49 /* Sources */ = {
+		OBJ_8 /* Prestige */ = {
 			isa = PBXGroup;
 			children = (
-				1E53E75C2143802500247C49 /* Prestige.swift */,
+				OBJ_9 /* Prestige.swift */,
 			);
-			path = Sources;
-			sourceTree = "<group>";
+			name = Prestige;
+			path = Sources/Prestige;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		1E53E7382143800900247C49 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E53E74E2143800900247C49 /* prestige.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		1E53E73C2143800900247C49 /* Prestige */ = {
+		"Prestige::Prestige" /* Prestige */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E53E7512143800900247C49 /* Build configuration list for PBXNativeTarget "Prestige" */;
+			buildConfigurationList = OBJ_21 /* Build configuration list for PBXNativeTarget "Prestige" */;
 			buildPhases = (
-				1E53E7382143800900247C49 /* Headers */,
-				1E53E7392143800900247C49 /* Sources */,
-				1E53E73A2143800900247C49 /* Frameworks */,
-				1E53E73B2143800900247C49 /* Resources */,
+				OBJ_24 /* Sources */,
+				OBJ_26 /* Frameworks */,
+				1E146AA82337F9C400232770 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Prestige;
-			productName = prestige;
-			productReference = 1E53E73D2143800900247C49 /* Prestige.framework */;
+			packageProductDependencies = (
+			);
+			productName = Prestige;
+			productReference = "Prestige::Prestige::Product" /* Prestige.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1E53E7452143800900247C49 /* prestigeTests */ = {
+		"Prestige::PrestigeTests" /* PrestigeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E53E7542143800900247C49 /* Build configuration list for PBXNativeTarget "prestigeTests" */;
+			buildConfigurationList = OBJ_39 /* Build configuration list for PBXNativeTarget "PrestigeTests" */;
 			buildPhases = (
-				1E53E7422143800900247C49 /* Sources */,
-				1E53E7432143800900247C49 /* Frameworks */,
-				1E53E7442143800900247C49 /* Resources */,
-				1E07603E21439B4F00F45F1B /* ShellScript */,
+				OBJ_42 /* Sources */,
+				OBJ_45 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1E53E7492143800900247C49 /* PBXTargetDependency */,
+				OBJ_47 /* PBXTargetDependency */,
 			);
-			name = prestigeTests;
-			productName = prestigeTests;
-			productReference = 1E53E7462143800900247C49 /* prestigeTests.xctest */;
+			name = PrestigeTests;
+			productName = PrestigeTests;
+			productReference = "Prestige::PrestigeTests::Product" /* PrestigeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1E53E7342143800900247C49 /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = "MFX Studios";
-				TargetAttributes = {
-					1E53E73C2143800900247C49 = {
-						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1000;
-					};
-					1E53E7452143800900247C49 = {
-						CreatedOnToolsVersion = 10.0;
-					};
-				};
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
 			};
-			buildConfigurationList = 1E53E7372143800900247C49 /* Build configuration list for PBXProject "Prestige" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Prestige" */;
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 1E53E7332143800900247C49;
-			productRefGroup = 1E53E73E2143800900247C49 /* Products */;
+			mainGroup = OBJ_5;
+			packageReferences = (
+			);
+			productRefGroup = OBJ_14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1E53E73C2143800900247C49 /* Prestige */,
-				1E53E7452143800900247C49 /* prestigeTests */,
+				"Prestige::Prestige" /* Prestige */,
+				"Prestige::PrestigeTests" /* PrestigeTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		1E53E73B2143800900247C49 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1E53E7442143800900247C49 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1E07603E21439B4F00F45F1B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				PromiseKit,
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "macosx) plat=Mac;;\niphone*) plat=iOS;;\n*) echo \"error: Unknown PLATFORM_NAME: $PLATFORM_NAME\"; exit 1;;\nesac\nfor (( n = 0; n < SCRIPT_INPUT_FILE_COUNT; n++ )); do\nVAR=SCRIPT_INPUT_FILE_$n\nframework=$(basename \"${!VAR}\")\nexport SCRIPT_INPUT_FILE_$n=\"$SRCROOT\"/Carthage/Build/$plat/\"$framework\".framework\ndone\n\n${CARTHAGE:-/usr/local/bin/carthage} copy-frameworks || exit\n\nfor (( n = 0; n < SCRIPT_INPUT_FILE_COUNT; n++ )); do\nVAR=SCRIPT_INPUT_FILE_$n\nsource=${!VAR}.dSYM\ndest=${BUILT_PRODUCTS_DIR}/$(basename \"$source\")\nditto \"$source\" \"$dest\" || exit\ndonesert its path.\n\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		1E53E7392143800900247C49 /* Sources */ = {
+		OBJ_24 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				1E53E7612143802500247C49 /* Prestige.swift in Sources */,
+				OBJ_25 /* Prestige.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E53E7422143800900247C49 /* Sources */ = {
+		OBJ_42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				1E53E74C2143800900247C49 /* prestigeTests.swift in Sources */,
+				OBJ_43 /* PrestigeTests.swift in Sources */,
+				OBJ_44 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1E53E7492143800900247C49 /* PBXTargetDependency */ = {
+		OBJ_47 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1E53E73C2143800900247C49 /* Prestige */;
-			targetProxy = 1E53E7482143800900247C49 /* PBXContainerItemProxy */;
+			target = "Prestige::Prestige" /* Prestige */;
+			targetProxy = 1E146A8B2337DBA200232770 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1E53E74F2143800900247C49 /* Debug */ = {
+		OBJ_22 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E07603B2143972800F45F1B /* Carthage.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Prestige.xcodeproj/Prestige_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Prestige;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Prestige;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Prestige.xcodeproj/Prestige_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Prestige;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Prestige;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
 					"DEBUG=1",
-					"$(inherited)",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = "";
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+				USE_HEADERMAP = NO;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
 			};
 			name = Debug;
 		};
-		1E53E7502143800900247C49 /* Release */ = {
+		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E07603B2143972800F45F1B /* Carthage.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = "";
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+				USE_HEADERMAP = NO;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
 			};
 			name = Release;
 		};
-		1E53E7522143800900247C49 /* Debug */ = {
+		OBJ_40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
-				INFOPLIST_FILE = prestige/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mfxstudios.prestige;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Prestige.xcodeproj/PrestigeTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = PrestigeTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
-		1E53E7532143800900247C49 /* Release */ = {
+		OBJ_41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
-				INFOPLIST_FILE = prestige/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mfxstudios.prestige;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = "";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		1E53E7552143800900247C49 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = prestigeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mfxstudios.prestigeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1E53E7562143800900247C49 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = prestigeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mfxstudios.prestigeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Prestige.xcodeproj/PrestigeTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = PrestigeTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E53E7372143800900247C49 /* Build configuration list for PBXProject "Prestige" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "Prestige" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1E53E74F2143800900247C49 /* Debug */,
-				1E53E7502143800900247C49 /* Release */,
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E53E7512143800900247C49 /* Build configuration list for PBXNativeTarget "Prestige" */ = {
+		OBJ_21 /* Build configuration list for PBXNativeTarget "Prestige" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1E53E7522143800900247C49 /* Debug */,
-				1E53E7532143800900247C49 /* Release */,
+				OBJ_22 /* Debug */,
+				OBJ_23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E53E7542143800900247C49 /* Build configuration list for PBXNativeTarget "prestigeTests" */ = {
+		OBJ_39 /* Build configuration list for PBXNativeTarget "PrestigeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1E53E7552143800900247C49 /* Debug */,
-				1E53E7562143800900247C49 /* Release */,
+				OBJ_40 /* Debug */,
+				OBJ_41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1E53E7342143800900247C49 /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }
