@@ -25,6 +25,10 @@ public protocol Action {
 public final class Store<S: Prestige.State> {
     public private(set) var state: S
     
+    public subscript<U>(dynamicMember keyPath: KeyPath<S, U>) -> U {
+        state[keyPath: keyPath]
+    }
+    
     public init(state: S = .init()) {
         self.state = state
     }
@@ -51,6 +55,10 @@ public protocol Action {
 public final class Store<S: State>: ObservableObject {
     private var subject: CurrentValueSubject<S, Error>
 
+    public subscript<U>(dynamicMember keyPath: KeyPath<S, U>) -> U {
+        subject.value[keyPath: keyPath]
+    }
+    
     public init(state: S) {
         self.subject = CurrentValueSubject(state)
     }
@@ -75,10 +83,6 @@ public final class Store<S: State>: ObservableObject {
         }, receiveValue: { s in
             self.subject.send(s)
         })
-    }
-    
-    subscript<U>(dynamicMember keyPath: KeyPath<S, U>) -> U {
-        subject.value[keyPath: keyPath]
     }
 
     public func observe<T: Equatable>(_ keyPath: KeyPath<S, T>) -> AnyPublisher<T, Error> {
