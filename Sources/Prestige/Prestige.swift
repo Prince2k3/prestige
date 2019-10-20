@@ -22,6 +22,7 @@ public protocol Action {
     func mutate(_ state: S) -> Promise<S>
 }
 
+@dynamicMemberLookup
 public final class Store<S: Prestige.State> {
     public private(set) var state: S
     
