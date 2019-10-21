@@ -54,11 +54,26 @@ store.dispatch(IncrementAction(increment: 3))
 }
 ```
 
+**Note:** With the addition of `@dyanmicMember` and `Self` Keypath feature. You can now reference **state** from the **store** itself.
+
+```swift 
+store.counter
+```
+
+vs 
+
+```swift 
+store.state.counter
+```
+
+**Note:** Prestige supports Combine. When not using `PromiseKit` Prestige will fall back to Combine, only from iOS 13 and above, otherwise you must use `PromiseKit`
+
+
 ## Requirements
 
-- iOS 10.0+
-- macOS 10.12+
-- Xcode 9.0+
+- iOS 12.0+
+- macOS 10.14+
+- Xcode 11.0+
 
 ## Installation
 
