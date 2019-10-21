@@ -47,7 +47,7 @@ Actions are dispatched through the store, and promise is returned when an **acti
 ```swift
 store.dispatch(IncrementAction(increment: 3))
 .done {
-  print(store.state.counter) // 3
+  print(store.counter) // 3
 }
 .catch { error in
   print(error)
