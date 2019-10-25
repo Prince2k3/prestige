@@ -18,10 +18,10 @@ public protocol Action {
 }
 
 @dynamicMemberLookup
-public class Store<S: Prestige.State> {
+open class Store<S: Prestige.State> {
     private(set) var state: S
     
-    public subscript<U>(dynamicMember keyPath: KeyPath<S, U>) -> U {
+    open subscript<U>(dynamicMember keyPath: KeyPath<S, U>) -> U {
         state[keyPath: keyPath]
     }
     
@@ -46,10 +46,10 @@ public protocol Action {
 }
 
 @dynamicMemberLookup
-public class Store<S: State>: ObservableObject {
+open class Store<S: State>: ObservableObject {
     private var subject: CurrentValueSubject<S, Error>
 
-    public subscript<U>(dynamicMember keyPath: KeyPath<S, U>) -> U {
+    open subscript<U>(dynamicMember keyPath: KeyPath<S, U>) -> U {
         subject.value[keyPath: keyPath]
     }
     
