@@ -10,21 +10,16 @@ public protocol State {
     init()
 }
 
-public protocol Mutation {
-    associatedtype S: State
-    func mutate(_ state: S) -> S
-}
-
 #if canImport(PromiseKit)
 
 public protocol Action {
     associatedtype S: Prestige.State
-    func mutate(_ state: S) -> Promise<S>
+    func async(_ store: Store<S>) -> Promise<Void>
 }
 
 @dynamicMemberLookup
-public final class Store<S: Prestige.State> {
-    public private(set) var state: S
+public class Store<S: Prestige.State> {
+    private(set) var state: S
     
     public subscript<U>(dynamicMember keyPath: KeyPath<S, U>) -> U {
         state[keyPath: keyPath]
@@ -34,14 +29,12 @@ public final class Store<S: Prestige.State> {
         self.state = state
     }
     
-    public func commit<M: Mutation>(_ mutation: M) where M.S == S {
-        self.state = mutation.mutate(state)
+    open func commit<U>(_ keyPath: WritableKeyPath<S, U>, _ value: U) {
+        state[keyPath: keyPath] = value
     }
     
-    public func dispatch<A: Prestige.Action>(_ action: A) -> Promise<Void> where A.S == S {
-        return action.mutate(state)
-        .get { self.state = $0 }
-        .asVoid()
+    open func dispatch<A: Prestige.Action>(_ action: A) -> Promise<Void> where A.S == S {
+        return action.async(self)
     }
 }
 
@@ -49,11 +42,11 @@ public final class Store<S: Prestige.State> {
 
 public protocol Action {
     associatedtype S: State
-    func mutate(_ state: S) -> Future<S, Error>
+    func async(_ store: Store<S>) -> Future<Void, Error>
 }
 
 @dynamicMemberLookup
-public final class Store<S: State>: ObservableObject {
+public class Store<S: State>: ObservableObject {
     private var subject: CurrentValueSubject<S, Error>
 
     public subscript<U>(dynamicMember keyPath: KeyPath<S, U>) -> U {
@@ -63,30 +56,23 @@ public final class Store<S: State>: ObservableObject {
     public init(state: S) {
         self.subject = CurrentValueSubject(state)
     }
-
-    public func dispatch<A: Action>(_ action: A) where A.S == S {
-        action.mutate(subject.value)
-        .sink(receiveCompletion: { result in
-            if case let .failure(error) = result {
-                self.subject.send(completion: .failure(error))
-            }
-        }, receiveValue: { s in
-            self.subject.send(s)
-        })
-    }
     
-    public func commit<M: Mutation>(_ mutation: M) where M.S == S {
-        Just(mutation.mutate(subject.value))
+    open func commit<U>(_ keyPath: WritableKeyPath<S, U>, _ value: U) {
+        subject.value[keyPath: keyPath] = value
+    }
+
+    open func dispatch<A: Prestige.Action>(_ action: A) where A.S == S {
+        action.async(self)
         .sink(receiveCompletion: { result in
             if case let .failure(error) = result {
                 self.subject.send(completion: .failure(error))
             }
-        }, receiveValue: { s in
-            self.subject.send(s)
+        }, receiveValue: { _ in
+            self.subject.send(self.subject.value)
         })
     }
 
-    public func observe<T: Equatable>(_ keyPath: KeyPath<S, T>) -> AnyPublisher<T, Error> {
+    open func observe<T: Equatable>(_ keyPath: KeyPath<S, T>) -> AnyPublisher<T, Error> {
         subject
         .tryMap { $0[keyPath: keyPath] }
         .removeDuplicates()
