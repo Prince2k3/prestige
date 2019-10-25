@@ -19,7 +19,7 @@ public protocol Action {
 
 @dynamicMemberLookup
 open class Store<S: Prestige.State> {
-    private(set) var state: S
+    public private(set) var state: S
     
     open subscript<U>(dynamicMember keyPath: KeyPath<S, U>) -> U {
         state[keyPath: keyPath]
