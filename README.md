@@ -20,11 +20,10 @@ struct IncrementAction {
 }
 
 extension IncrementAction: Action {
-   typealias State = AppState
-  
-    func mutate(_ state: AppState) -> Promise<AppState> {
-        let count = state.counter + self.increment
-        return .value(AppState(counter: count))
+    func aysnc(_ store: Store<AppState>) -> Promise<Void> {
+        return after(seconds: 1) {
+            store.commit(\.count, store.counter + self.increment) 
+        }.asVoid()
     }
 }
 ```
@@ -53,6 +52,14 @@ store.dispatch(IncrementAction(increment: 3))
   print(error)
 }
 ```
+
+You can change a value in the state using the **store**'s commit method
+
+```Swift
+store.commit(\.count, 10)
+```
+
+commiting a change to the state is immediate.
 
 **Note:** With the addition of `@dyanmicMember` and `Self` Keypath feature. You can now reference **state** from the **store** itself.
 
