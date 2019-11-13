@@ -2,7 +2,9 @@ import Foundation
 
 #if canImport(PromiseKit)
 import PromiseKit
-#elseif canImport(Combine)
+#endif
+
+#if canImport(Combine)
 import Combine
 #endif
 
@@ -10,19 +12,29 @@ public protocol State {
     init()
 }
 
-#if canImport(PromiseKit)
-
 public protocol Action {
     associatedtype S: Prestige.State
     func async(_ store: Store<S>) -> Promise<Void>
+    
+    @available(iOS 13.0, *)
+    func async(_ store: Store<S>) -> Future<Void, Error>
 }
 
 @dynamicMemberLookup
 open class Store<S: Prestige.State> {
     public private(set) var state: S
     
+    @available(iOS 13.0, *)
+    private lazy var subject: CurrentValueSubject<S, Error> = {
+        return CurrentValueSubject(state)
+    }()
+    
     open subscript<U>(dynamicMember keyPath: KeyPath<S, U>) -> U {
-        state[keyPath: keyPath]
+        if #available(iOS 13.0, *) {
+            return subject.value[keyPath: keyPath]
+        } else {
+            return state[keyPath: keyPath]
+        }
     }
     
     public init(state: S = .init()) {
@@ -30,7 +42,11 @@ open class Store<S: Prestige.State> {
     }
     
     open func commit<U>(_ keyPath: WritableKeyPath<S, U>, _ value: U) {
-        state[keyPath: keyPath] = value
+        if #available(iOS 13.0, *) {
+            subject.value[keyPath: keyPath] = value
+        } else {
+            state[keyPath: keyPath] = value
+        }
     }
     
     open func dispatch<A: Prestige.Action>(_ action: A) -> Promise<Void> where A.S == S {
@@ -38,33 +54,10 @@ open class Store<S: Prestige.State> {
     }
 }
 
-#elseif canImport(Combine)
-
 @available(iOS 13.0, *)
-public protocol Action {
-    associatedtype S: State
-    func async(_ store: Store<S>) -> Future<Void, Error>
-}
-
-@available(iOS 13.0, *)
-@dynamicMemberLookup
-open class Store<S: State>: ObservableObject {
-    private var subject: CurrentValueSubject<S, Error>
-
-    open subscript<U>(dynamicMember keyPath: KeyPath<S, U>) -> U {
-        subject.value[keyPath: keyPath]
-    }
-    
-    public init(state: S) {
-        self.subject = CurrentValueSubject(state)
-    }
-    
-    open func commit<U>(_ keyPath: WritableKeyPath<S, U>, _ value: U) {
-        subject.value[keyPath: keyPath] = value
-    }
-
+extension Store: ObservableObject {
     open func dispatch<A: Prestige.Action>(_ action: A) where A.S == S {
-        action.async(self)
+        _ = action.async(self)
         .sink(receiveCompletion: { result in
             if case let .failure(error) = result {
                 self.subject.send(completion: .failure(error))
@@ -81,5 +74,3 @@ open class Store<S: State>: ObservableObject {
         .eraseToAnyPublisher()
     }
 }
-
-#endif
