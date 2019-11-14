@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E5D574B235A691D00083376 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5D574A235A691D00083376 /* PromiseKit.framework */; };
-		1E5D574D235A6E0B00083376 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5D5746235A690200083376 /* PromiseKit.framework */; };
-		1E7B8904235A6F2F0071BCC5 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5D5746235A690200083376 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		OBJ_25 /* Prestige.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Prestige.swift */; };
 		OBJ_43 /* PrestigeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* PrestigeTests.swift */; };
 		OBJ_44 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
@@ -33,7 +30,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1E7B8904235A6F2F0071BCC5 /* PromiseKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,8 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				1E5D574D235A6E0B00083376 /* PromiseKit.framework in Frameworks */,
-				1E5D574B235A691D00083376 /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
