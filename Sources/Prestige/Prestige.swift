@@ -42,20 +42,20 @@ open class Store<S: Prestige.State> {
 
 @available(iOS 13.0, macOS 10.15, *)
 public protocol Action {
-    associatedtype S: State
+    associatedtype S: Prestige.State
     func async(_ store: Store<S>) -> Future<Void, Error>
 }
 
 @available(iOS 13.0, macOS 10.15, *)
 @dynamicMemberLookup
-open class Store<S: State>: ObservableObject {
+open class Store<S: Prestige.State>: ObservableObject {
     private var subject: CurrentValueSubject<S, Error>
 
     open subscript<U>(dynamicMember keyPath: KeyPath<S, U>) -> U {
         subject.value[keyPath: keyPath]
     }
     
-    public init(state: S) {
+    public init(state: S = .init()) {
         self.subject = CurrentValueSubject(state)
     }
     
