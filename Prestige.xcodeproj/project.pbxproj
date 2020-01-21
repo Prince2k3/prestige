@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E4C81B323D688DC006E7DFC /* exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4C81B223D688DC006E7DFC /* exported.swift */; };
 		1E5D574B235A691D00083376 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5D574A235A691D00083376 /* PromiseKit.framework */; };
 		1E5D574D235A6E0B00083376 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5D5746235A690200083376 /* PromiseKit.framework */; };
 		1E7B8904235A6F2F0071BCC5 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5D5746235A690200083376 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -41,6 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E4C81B223D688DC006E7DFC /* exported.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exported.swift; sourceTree = "<group>"; };
 		1E5D5700235A5C8F00083376 /* UniversalFramework_Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = UniversalFramework_Framework.xcconfig; sourceTree = "<group>"; };
 		1E5D5701235A5C8F00083376 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1E5D5702235A5C8F00083376 /* UniversalFramework_Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = UniversalFramework_Base.xcconfig; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* Prestige.swift */,
+				1E4C81B223D688DC006E7DFC /* exported.swift */,
 			);
 			name = Prestige;
 			path = Sources/Prestige;
@@ -230,6 +233,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_25 /* Prestige.swift in Sources */,
+				1E4C81B323D688DC006E7DFC /* exported.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
