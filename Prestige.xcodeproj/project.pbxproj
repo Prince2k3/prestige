@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E4C81BA23D68E80006E7DFC /* exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4C81B923D68E80006E7DFC /* exported.swift */; };
 		OBJ_25 /* Prestige.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Prestige.swift */; };
 		OBJ_43 /* PrestigeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* PrestigeTests.swift */; };
 		OBJ_44 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E4C81B923D68E80006E7DFC /* exported.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exported.swift; sourceTree = "<group>"; };
 		1E5D5700235A5C8F00083376 /* UniversalFramework_Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = UniversalFramework_Framework.xcconfig; sourceTree = "<group>"; };
 		1E5D5701235A5C8F00083376 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1E5D5702235A5C8F00083376 /* UniversalFramework_Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = UniversalFramework_Base.xcconfig; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* Prestige.swift */,
+				1E4C81B923D68E80006E7DFC /* exported.swift */,
 			);
 			name = Prestige;
 			path = Sources/Prestige;
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				1E4C81BA23D68E80006E7DFC /* exported.swift in Sources */,
 				OBJ_25 /* Prestige.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

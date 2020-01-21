@@ -40,13 +40,13 @@ open class Store<S: Prestige.State> {
 
 #elseif canImport(Combine)
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 public protocol Action {
     associatedtype S: State
     func async(_ store: Store<S>) -> Future<Void, Error>
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, *)
 @dynamicMemberLookup
 open class Store<S: State>: ObservableObject {
     private var subject: CurrentValueSubject<S, Error>
@@ -64,7 +64,7 @@ open class Store<S: State>: ObservableObject {
     }
 
     open func dispatch<A: Prestige.Action>(_ action: A) where A.S == S {
-        action.async(self)
+        _ = action.async(self)
         .sink(receiveCompletion: { result in
             if case let .failure(error) = result {
                 self.subject.send(completion: .failure(error))
