@@ -40,11 +40,13 @@ open class Store<S: Prestige.State> {
 
 #elseif canImport(Combine)
 
+@available(iOS 13.0, *)
 public protocol Action {
     associatedtype S: State
     func async(_ store: Store<S>) -> Future<Void, Error>
 }
 
+@available(iOS 13.0, *)
 @dynamicMemberLookup
 open class Store<S: State>: ObservableObject {
     private var subject: CurrentValueSubject<S, Error>

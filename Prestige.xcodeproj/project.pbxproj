@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E4C81B323D688DC006E7DFC /* exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4C81B223D688DC006E7DFC /* exported.swift */; };
-		1E5D574B235A691D00083376 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5D574A235A691D00083376 /* PromiseKit.framework */; };
-		1E5D574D235A6E0B00083376 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5D5746235A690200083376 /* PromiseKit.framework */; };
-		1E7B8904235A6F2F0071BCC5 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5D5746235A690200083376 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E4C81B523D689F3006E7DFC /* exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4C81B423D689F2006E7DFC /* exported.swift */; };
 		OBJ_25 /* Prestige.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Prestige.swift */; };
 		OBJ_43 /* PrestigeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* PrestigeTests.swift */; };
 		OBJ_44 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
@@ -34,7 +31,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1E7B8904235A6F2F0071BCC5 /* PromiseKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,7 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1E4C81B223D688DC006E7DFC /* exported.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exported.swift; sourceTree = "<group>"; };
+		1E4C81B423D689F2006E7DFC /* exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exported.swift; sourceTree = "<group>"; };
 		1E5D5700235A5C8F00083376 /* UniversalFramework_Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = UniversalFramework_Framework.xcconfig; sourceTree = "<group>"; };
 		1E5D5701235A5C8F00083376 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1E5D5702235A5C8F00083376 /* UniversalFramework_Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = UniversalFramework_Base.xcconfig; sourceTree = "<group>"; };
@@ -64,8 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				1E5D574D235A6E0B00083376 /* PromiseKit.framework in Frameworks */,
-				1E5D574B235A691D00083376 /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,8 +146,8 @@
 		OBJ_8 /* Prestige */ = {
 			isa = PBXGroup;
 			children = (
+				1E4C81B423D689F2006E7DFC /* exported.swift */,
 				OBJ_9 /* Prestige.swift */,
-				1E4C81B223D688DC006E7DFC /* exported.swift */,
 			);
 			name = Prestige;
 			path = Sources/Prestige;
@@ -232,8 +226,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				1E4C81B523D689F3006E7DFC /* exported.swift in Sources */,
 				OBJ_25 /* Prestige.swift in Sources */,
-				1E4C81B323D688DC006E7DFC /* exported.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,9 +294,9 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Prestige.xcodeproj/Prestige_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -314,7 +308,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = Prestige;
-				TVOS_DEPLOYMENT_TARGET = 11.4;
+				TVOS_DEPLOYMENT_TARGET = 12.4;
 				WATCHOS_DEPLOYMENT_TARGET = 5.3;
 			};
 			name = Debug;
@@ -362,9 +356,9 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Prestige.xcodeproj/Prestige_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -376,7 +370,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = Prestige;
-				TVOS_DEPLOYMENT_TARGET = 11.4;
+				TVOS_DEPLOYMENT_TARGET = 12.4;
 				WATCHOS_DEPLOYMENT_TARGET = 5.3;
 			};
 			name = Release;
